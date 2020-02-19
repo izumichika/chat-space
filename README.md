@@ -68,3 +68,7 @@ Things you may want to cover:
 |message_id|integer|null: false, foreign_key: true|
 |body|text||
 |image|string||
+
+### Association
+
+- belongs_to :user
