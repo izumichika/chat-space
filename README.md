@@ -33,7 +33,7 @@ Things you may want to cover:
 |email|string|null: false, unique: true|
 |pass|integer|null: false, foreign_key: true|
 
-### Association
+### users-Association
 - has_many :messages
 - has_many :users_groups
 - has_many :groups, through:users_groups
@@ -46,7 +46,7 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 |group_name|string|null: false, foreign_key: true, unique: true|
 
-### Association
+### groups-Association
 - has_many :users_groups
 - has_many :users, through: :users_groups
 
@@ -57,7 +57,7 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### Association
+### users_groups-Association
 - belongs_to :group
 - belongs_to :user
 
@@ -69,6 +69,6 @@ Things you may want to cover:
 |body|text||
 |image|string||
 
-### Association
+### messages-Association
 
 - belongs_to :user
