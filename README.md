@@ -62,3 +62,9 @@ Things you may want to cover:
 - belongs_to :user
 
 ## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|message_id|integer|null: false, foreign_key: true|
+|body|text||
+|image|string||
