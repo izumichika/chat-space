@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## usersテーブル
+
+## groupsテーブル
+
+## users_groupsテーブル
+
+## messagesテーブル
