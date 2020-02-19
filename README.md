@@ -43,6 +43,10 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 |group_name|string|null: false, foreign_key: true, unique: true|
 
+### Association
+- has_many :users_groups
+- has_many :users, through: :users_groups
+
 ## users_groupsテーブル
 
 |Column|Type|Options|
