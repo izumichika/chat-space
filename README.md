@@ -34,7 +34,10 @@ Things you may want to cover:
 |pass|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :messages, through: :users_groups
+- has_many :messages
+- has_many :users_groups
+- has_many :groups, through:users_groups
+
 
 ## groupsテーブル
 
