@@ -33,6 +33,8 @@ Things you may want to cover:
 |email|string|null: false, unique: true|
 |pass|integer|null: false, foreign_key: true|
 
+### Association
+- has_many :messages, through: :users_groups
 
 ## groupsテーブル
 
