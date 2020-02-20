@@ -2,8 +2,38 @@
   box-sizing: border-box;
 }
 
-wrapper {
+.wrapper {
+  display: block;
 
+  .side_bar {
+    width: 300px;
+    float: left;
+    height: 100vh;
+    .side-header {
+      background-color:#253141;
+      height: 100px;
+    }
+    .groups {
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+    }
+  }
+  .main_chat {
+    width: calc(100vw - 300px);
+    float: left;
 
+    .main-header {
+      background-color: #ffffff;
+      height: 100px;
+    }
+    .messages {
+      background-color: #fafafa;
+      height: calc(100vh - 100px - 90px)
+    }
+    .form {
+      background-color: #d2d2d2;
+      height: 90px;
+
+    }
+  }
 }
-
