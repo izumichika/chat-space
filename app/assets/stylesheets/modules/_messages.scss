@@ -97,6 +97,40 @@
       background-color: #ffffff;
       height: 100px;
       border-bottom: solid 1px #eee;
+      display: flex;
+      .main-left-box {
+        margin-left: 40px;
+        .main-group-name {
+          padding-top: 35px;
+          font-size: 20px;
+          color: #333333;
+        }
+        .menber-name {
+          padding-top: 15px;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      .main-right-box {
+        margin-left: auto;
+        margin-right: 40px;
+        a {
+            text-decoration: none;
+          }
+        .edit-btn {
+          margin-top: 28px;
+          height: 40px;
+          width: 60px;
+          font-size: 16px;
+          color: #38aef0;
+          border: solid 1px #38aef0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          
+        }
+      }
     }
     .messages {
       background-color: #fafafa;
