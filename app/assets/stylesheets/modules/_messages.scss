@@ -207,6 +207,9 @@
       }
       .input-box {
         width:100%;
+        display: flex;
+        background-color: white;
+
         .input-text {
           font-size: 16px;
           height: 50px;
@@ -215,16 +218,25 @@
           color: #434a54;
           border-style: none;
         }
+        .input-box__image {
+          line-height: 50px;
+          padding: 0 10px;
+          cursor: pointer;
+          input {
+            display: none;  
+          }
+
+        }
       }
       .submit-btn {
         width: 100px;
         height: 50px;
         padding: 0 30px;
         margin-left: 15px;
-        background-color: #eeeeee;
+        background-color: #38aef0;
         font-size: 16px;
         cursor: pointer;
-        color: #1a1d21;
+        color: white;
       }
       
     }
