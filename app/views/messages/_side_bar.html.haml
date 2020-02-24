@@ -1,0 +1,29 @@
+.side_bar
+  .side_bar__header
+    .side_bar__header__box
+      %p.side_bar__header__box__UserName
+        madoka
+      %ul.side_bar__header__box__Menu
+        %li.side_bar__header__box__Menu__NewGroup
+          = link_to "#" do
+            = icon('far', 'edit')
+        %li.side_bar__header__box__Menu__EditUser
+          = link_to "#" do
+            = icon('fas', 'cog')
+        
+  .groups
+    .group__box
+      .group__box__name
+        techcamp
+      .group__box__message
+        まだメッセージがありません
+    .group__box
+      .group__box__name
+        セブンイレブン
+      .group__box__message
+        まだメッセージがありません
+    .group__box
+      .group__box__name
+        ファミリーマート
+      .group__box__message
+        まだメッセージがありません
