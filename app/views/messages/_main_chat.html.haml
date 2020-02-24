@@ -37,9 +37,8 @@
 
   .form
     %form.form__NewMessage
-      .form__NewMessage__input
-        %input.form__NewMessage__input__text{:placeholder => "type a message", :type => "text"}/
-        %label.form__NewMessage__input__image
-          = icon('fas', 'image')
-          %input{type: "file"}
+      %input.form__NewMessage__text{:placeholder => "type a message", :type => "text"}/
+      %label.form__NewMessage__image
+        = icon('fas', 'image')
+        %input{type: "file"}
     %input.form__SubmitBtn{:name => "commit", :type => "submit", :value => "Send"}/  
