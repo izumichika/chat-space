@@ -44,35 +44,13 @@
       height: calc(100vh - 100px);
       padding: 0 20px;
       color: #ffffff;
-      .group-box {
-        .group-name-box {
-        padding-top: 20px;
-        padding-bottom: 5px;
-        font-size: 15px
+      .group__box {
+        &__name {
+          padding-top: 20px;
+          padding-bottom: 5px;
+          font-size: 15px
         }
-        .group-new-message-box {
-          font-size: 11px;
-          padding-bottom: 40px;
-        }
-      }
-      .group-box2 {
-        .group-name-box2 {
-        padding-top: 20px;
-        padding-bottom: 5px;
-        font-size: 15px
-        }
-        .group-new-message-box2 {
-          font-size: 11px;
-          padding-bottom: 40px;
-        }
-      }
-      .group-box3 {
-        .group-name-box3 {
-        padding-top: 20px;
-        padding-bottom: 5px;
-        font-size: 15px
-        }
-        .group-new-message-box3 {
+        &__message {
           font-size: 11px;
           padding-bottom: 40px;
         }
