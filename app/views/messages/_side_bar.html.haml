@@ -1,13 +1,13 @@
 .side_bar
-  .side-header
-    .side-header-box
-      .user-name-box
+  .side_bar__header
+    .side_bar__header__box
+      %p.side_bar__header__box__UserName
         madoka
-      .icon-box
-        .create-group-box
+      %ul.side_bar__header__box__Menu
+        %li.side_bar__header__box__Menu__NewGroup
           = link_to "#" do
             = icon('far', 'edit')
-        .edit-user-box
+        %li.side_bar__header__box__Menu__EditUser
           = link_to "#" do
             = icon('fas', 'cog')
         
