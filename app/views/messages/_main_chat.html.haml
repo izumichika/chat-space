@@ -2,9 +2,11 @@
   .main__header 
     .main__header__LeftBox
       .main__header__LeftBox__GroupName
-        test
+        = @group.name
       .main__header__LeftBox__MemberName
-        Member: name
+        Member: 
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     .main__header__RightBox
       = link_to "#" do
         .main__header__RightBox__EditBtn
