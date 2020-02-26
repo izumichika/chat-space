@@ -36,9 +36,28 @@
         定食がいい！
 
   .form
-    %form.form__NewMessage
-      %input.form__NewMessage__text{:placeholder => "type a message", :type => "text"}/
-      %label.form__NewMessage__image
-        = icon('fas', 'image')
-        %input{type: "file"}
-    %input.form__SubmitBtn{:name => "commit", :type => "submit", :value => "Send"}/  
+    = form_for [@group, @message] do |f|
+      .form__NewMessage
+        = f.text_field :content, class: 'form__NewMessage__text', placeholder: 'type a message'
+        = f.label :image, class: 'form__NewMessage__image' 
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__SubmitBtn'
+
+
+    -# .form
+    -#   = form_for [@group, @message] do |f|
+    -#     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    -#     .form__mask
+    -#       = f.label :image, class: 'form__mask__image' do
+    -#         = icon('fas', 'image', class: 'icon')
+    -#         = f.file_field :image, class: 'hidden'
+    -#     = f.submit 'Send', class: 'form__submit'
+
+    -#   .form
+    -# %form.form__NewMessage
+    -#   %input.form__NewMessage__text{:placeholder => "type a message", :type => "text"}/
+    -#   %label.form__NewMessage__image
+    -#     = icon('fas', 'image')
+    -#     %input{type: "file"}
+    -# %input.form__SubmitBtn{:name => "commit", :type => "submit", :value => "Send"}/  
