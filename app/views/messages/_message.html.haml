@@ -1,0 +1,12 @@
+.message__post
+  .message__post__TopBox
+    .message__post__TopBox__name
+      = message.user.name
+    .message__post__TopBox__time
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .message__post__content
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'message__post__content__image' if message.image.present?
+

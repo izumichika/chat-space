@@ -2,43 +2,24 @@
   .main__header 
     .main__header__LeftBox
       .main__header__LeftBox__GroupName
-        test
+        = @group.name
       .main__header__LeftBox__MemberName
-        Member: name
+        Member: 
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     .main__header__RightBox
-      = link_to "#" do
+      = link_to edit_group_path(@group) do
         .main__header__RightBox__EditBtn
           Edit
+
   .messages
-    .message__post
-      .message__post__TopBox
-        .message__post__TopBox__name
-          masa
-        .message__post__TopBox__time
-          2020/02/21 (Fry) 13:00:00
-      .message__post__text
-        お昼何食べようかな
-    .message__post
-      .message__post__TopBox
-        .message__post__TopBox__name
-          jojo
-        .message__post__TopBox__time
-          2020/02/21 (Fry) 13:00:00
-      .message__post__text
-        ラーメンでどう？
-    .message__post
-      .message__post__TopBox
-        .message__post__TopBox__name
-          momo
-        .message__post__TopBox__time
-          2020/02/21 (Fry) 13:00:00
-      .message__post__text
-        定食がいい！
+    = render @messages
 
   .form
-    %form.form__NewMessage
-      %input.form__NewMessage__text{:placeholder => "type a message", :type => "text"}/
-      %label.form__NewMessage__image
-        = icon('fas', 'image')
-        %input{type: "file"}
-    %input.form__SubmitBtn{:name => "commit", :type => "submit", :value => "Send"}/  
+    = form_for [@group, @message] do |f|
+      .form__NewMessage
+        = f.text_field :content, class: 'form__NewMessage__text', placeholder: 'type a message'
+        = f.label :image, class: 'form__NewMessage__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__SubmitBtn'
