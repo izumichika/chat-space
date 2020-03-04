@@ -133,7 +133,6 @@
       box-sizing      : border-box;
       height          : 90px;
       padding         : 20px 50px 20px 40px;
-      // display         : flex;
       &__box {
         position      : relative;
         &__message {
@@ -147,7 +146,6 @@
           position        : absolute;
           top             :5px;
           right           : 150px;
-          // background-color: $white;
           float           : left;
           height          : 40px;
           padding-right   : 10px;
