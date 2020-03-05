@@ -62,6 +62,7 @@ $(function(){
     })
   })
   var reloadMessages = function() {
+    e.preventDefault();
     var last_message_id = $('.message__post:last').data("message-id");
     console.log(last_message_id);
     $.ajax({
