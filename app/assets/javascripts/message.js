@@ -62,7 +62,6 @@ $(function(){
     })
   })
   var reloadMessages = function() {
-    e.preventDefault();
     var last_message_id = $('.message__post:last').data("message-id");
     console.log(last_message_id);
     $.ajax({
@@ -72,8 +71,11 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      if (messages.lengh !== 0) {
+      console.log(messages)
+      if (messages.length !== 0) {
+        console.log("reload")
         var insertHTML = '';
+        console.log(insertHTML)
         $.each(messages, function(i,message) {
           insertHTML += buildHTML(message)
         });
